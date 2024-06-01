@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-    Module N queens
-"""
+"""Module N queens"""
 import sys
 
 
@@ -21,7 +19,7 @@ n = int(sys.argv[1])
 
 
 def queens(n, i=0, a=[], b=[], c=[]):
-    """ search for possible positions """
+    """search for possible positions"""
     if i < n:
         for j in range(n):
             if j not in a and i + j not in b and i - j not in c:
@@ -31,7 +29,7 @@ def queens(n, i=0, a=[], b=[], c=[]):
 
 
 def solve(n):
-    """ fnx solve """
+    """fnx solve"""
     k = []
     i = 0
     for solution in queens(n, 0):
